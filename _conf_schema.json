@@ -1,0 +1,134 @@
+{
+    "gradio": {
+        "description": "Gradio 接口配置",
+        "type": "object",
+        "hint": "",
+        "items": {
+            "space_url": {
+                "description": "Gradio Space 地址",
+                "type": "string",
+                "hint": "默认使用 https://Moyang123-ATRI-test.hf.space",
+                "default": "https://Moyang123-ATRI-test.hf.space"
+            }
+        }
+    },
+    "auto_config": {
+        "description": "主动调用配置",
+        "type": "object",
+        "hint": "插件有一定概率主动将 bot 回复转成语音发送",
+        "items": {
+            "send_record_probability": {
+                "description": "主动转语音概率",
+                "type": "float",
+                "hint": "",
+                "default": 0.15
+            },
+            "max_resp_text_len": {
+                "description": "文本长度限制",
+                "type": "int",
+                "hint": "超过此长度不转语音",
+                "default": 50
+            }
+        }
+    },
+    "tts_params": {
+        "description": "TTS 生成参数",
+        "type": "object",
+        "hint": "对应 Gradio predict 的参数，文本由消息提供，其余可在此配置",
+        "items": {
+            "main_audio_label": {
+                "description": "主参考音频标签",
+                "type": "string",
+                "hint": "",
+                "default": "ATR_b401_088.wav | Japanese | それは…………おそらく本当です。思い出せるメモリー..."
+            },
+            "prompt_text": {
+                "description": "提示文本",
+                "type": "string",
+                "hint": "",
+                "default": "それは…………おそらく本当です。思い出せるメモリーの断片に、うっすらと叱られた記憶が残っています"
+            },
+            "prompt_language": {
+                "description": "提示文本语言",
+                "type": "string",
+                "hint": "",
+                "default": "Japanese"
+            },
+            "text_language": {
+                "description": "输入文本语言",
+                "type": "string",
+                "hint": "",
+                "default": "English"
+            },
+            "how_to_cut": {
+                "description": "文本切分方式",
+                "type": "string",
+                "hint": "",
+                "default": "Slice once every 4 sentences"
+            },
+            "top_k": {
+                "description": "top_k",
+                "type": "int",
+                "hint": "",
+                "default": 15
+            },
+            "top_p": {
+                "description": "top_p",
+                "type": "float",
+                "hint": "",
+                "default": 1.0
+            },
+            "temperature": {
+                "description": "temperature",
+                "type": "float",
+                "hint": "",
+                "default": 1.0
+            },
+            "ref_free": {
+                "description": "禁用参考音频",
+                "type": "bool",
+                "hint": "",
+                "default": false
+            },
+            "speed": {
+                "description": "语速",
+                "type": "float",
+                "hint": "",
+                "default": 1
+            },
+            "if_freeze": {
+                "description": "冻结参考",
+                "type": "bool",
+                "hint": "",
+                "default": false
+            },
+            "aux_audio_labels": {
+                "description": "辅助参考音频标签列表",
+                "type": "list",
+                "hint": "",
+                "default": [
+                    "ATR_b401_096.wav | Japanese | 甘えんぼアトリになって眠ってもよろしいでしょうか",
+                    "ATR_b401_059.wav | Japanese | はい。有用性が獲得できますから"
+                ]
+            },
+            "sample_steps": {
+                "description": "采样步数",
+                "type": "int",
+                "hint": "",
+                "default": 8
+            },
+            "if_sr": {
+                "description": "开启超分",
+                "type": "bool",
+                "hint": "",
+                "default": false
+            },
+            "pause_second": {
+                "description": "句间停顿秒数",
+                "type": "float",
+                "hint": "",
+                "default": 0.3
+            }
+        }
+    }
+}

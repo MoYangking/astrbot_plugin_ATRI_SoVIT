@@ -1,0 +1,7 @@
+name: astrbot_plugin_ATRI_SoVIT # 这是你的插件的唯一识别名。
+display_name: ATRI_SoVIT Gradio
+desc: 对接 ATRI Gradio Space，提供文本转语音(TTS)服务 # 插件简短描述
+help: /说 xxx  # 插件的帮助信息
+version: v1.1.0 # 插件版本号。格式：v1.1.1 或者 v1.1
+author: MoYang # 作者
+repo: https://github.com/MoYang/astrbot_plugin_ATRI_SoVIT # 插件的仓库地址
