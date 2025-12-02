@@ -25,7 +25,7 @@ SAVED_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
     "MoYang",
     "ATRI_SoVIT对接插件",
     "1.1.0",
-    "https://github.com/MoYang/astrbot_plugin_ATRI_SoVIT",
+    "https://github.com/MoYangking/astrbot_plugin_ATRI_SoVIT",
 )
 class GPTSoVITSPlugin(Star):
     """
